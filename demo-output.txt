@@ -1,0 +1,16 @@
+== 1. Earn, then the partner's webhook is delivered twice ==
+balance after earn + duplicate delivery (expect 100)           100
+duplicate recognised as replay                                 True
+
+== 2. 30 simultaneous checkouts of 10 units against a balance of 100 ==
+succeeded (expect 10)                                          10
+rejected for insufficient balance (expect 20)                  20
+balance (expect 0, never negative)                             0
+
+== 3. Refunds: partial, replayed, and over-limit ==
+balance after refund of 4, delivered twice (expect 4)          4
+refund beyond the original spend                               rejected: refund 1 exceeds remaining 0 of spend 2
+balance (expect 10)                                            10
+
+== 4. Reconciliation (recomputed from entries, not cached balances) ==
+problems found (expect [])                                     []

@@ -1,0 +1,11 @@
+M1 skip idempotency lookup: KILLED  (FAILED (failures=2, errors=5))
+M2 deferred BEGIN instead of IMMEDIATE (check-then-act race): KILLED  (FAILED (failures=4))
+M3 remove application balance check in spend: KILLED  (FAILED (failures=1, errors=2))
+M4 refund ignores amount already refunded: KILLED  (FAILED (failures=3))
+M5 reconcile always reports clean: KILLED  (FAILED (failures=2))
+M6 request hash ignores payload: KILLED  (FAILED (failures=1))
+M7 refund does not require the reference to be a spend: KILLED  (FAILED (errors=1))
+M8 no explicit ROLLBACK (expected equivalent: conn.close() discards the open txn): SURVIVED  (OK)
+M9 commit between txn row and its entries (breaks atomicity): KILLED  (FAILED (failures=1))
+
+survived mutants: 1

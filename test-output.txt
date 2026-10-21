@@ -1,0 +1,31 @@
+test_rejects_bad_amounts (test_ledger.TestAmountValidation.test_rejects_bad_amounts) ... ok
+test_failure_midway_leaves_no_partial_state (test_ledger.TestAtomicity.test_failure_midway_leaves_no_partial_state) ... ok
+test_earn_credits_user (test_ledger.TestBasics.test_earn_credits_user) ... ok
+test_spend_debits_user (test_ledger.TestBasics.test_spend_debits_user) ... ok
+test_spend_more_than_balance_rejected_and_leaves_no_trace (test_ledger.TestBasics.test_spend_more_than_balance_rejected_and_leaves_no_trace) ... ok
+test_unknown_user_has_zero_balance (test_ledger.TestBasics.test_unknown_user_has_zero_balance) ... ok
+test_concurrent_distinct_spends_never_overdraw (test_ledger.TestConcurrency.test_concurrent_distinct_spends_never_overdraw) ... ok
+test_concurrent_same_key_earn_applies_exactly_once (test_ledger.TestConcurrency.test_concurrent_same_key_earn_applies_exactly_once) ... ok
+test_concurrent_same_key_spend_applies_exactly_once (test_ledger.TestConcurrency.test_concurrent_same_key_spend_applies_exactly_once) ... ok
+test_reverse_earn_rejected_if_already_spent_policy_is_open_question (test_ledger.TestEarnReversal.test_reverse_earn_rejected_if_already_spent_policy_is_open_question) ... ok
+test_reverse_earn_twice_is_rejected (test_ledger.TestEarnReversal.test_reverse_earn_twice_is_rejected) ... ok
+test_reverse_earn_when_balance_available (test_ledger.TestEarnReversal.test_reverse_earn_when_balance_available) ... ok
+test_earn_replay_returns_same_txn_and_credits_once (test_ledger.TestIdempotency.test_earn_replay_returns_same_txn_and_credits_once) ... ok
+test_same_key_different_payload_is_conflict_and_changes_nothing (test_ledger.TestIdempotency.test_same_key_different_payload_is_conflict_and_changes_nothing) ... ok
+test_spend_replay_debits_once (test_ledger.TestIdempotency.test_spend_replay_debits_once) ... ok
+test_model_agreement (test_ledger.TestRandomizedAgainstModel.test_model_agreement) ... ok
+test_db_rejects_negative_user_balance_even_if_app_logic_is_bypassed (test_ledger.TestReconciliation.test_db_rejects_negative_user_balance_even_if_app_logic_is_bypassed) ... ok
+test_reconcile_detects_balance_drift (test_ledger.TestReconciliation.test_reconcile_detects_balance_drift) ... ok
+test_reconcile_detects_unbalanced_transaction (test_ledger.TestReconciliation.test_reconcile_detects_unbalanced_transaction) ... ok
+test_concurrent_refunds_cannot_exceed_spend (test_ledger.TestRefunds.test_concurrent_refunds_cannot_exceed_spend) ... ok
+test_full_refund_restores_balance (test_ledger.TestRefunds.test_full_refund_restores_balance) ... ok
+test_over_refund_rejected_in_one_step (test_ledger.TestRefunds.test_over_refund_rejected_in_one_step) ... ok
+test_partial_refunds_accumulate_up_to_spend_amount (test_ledger.TestRefunds.test_partial_refunds_accumulate_up_to_spend_amount) ... ok
+test_refund_arriving_before_its_spend_is_rejected_not_guessed (test_ledger.TestRefunds.test_refund_arriving_before_its_spend_is_rejected_not_guessed) ... ok
+test_refund_must_reference_a_spend (test_ledger.TestRefunds.test_refund_must_reference_a_spend) ... ok
+test_refund_replay_does_not_double_refund (test_ledger.TestRefunds.test_refund_replay_does_not_double_refund) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 2.063s
+
+OK
